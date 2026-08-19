@@ -1,5 +1,17 @@
+include:
+  - local: 'ci/step*.yml'
+
+stages:
+  - test
+  - step2
+  - step3
+  - step4
+  - step5
+  - step6
+
 run_tests:
   image: python:3.9-slim
+  stage: test
   before_script:    
     - apt-get update && apt-get install make    
   script:

@@ -1,5 +1,6 @@
 run_tests:
-  image: python:3.9-slim
+  stage: step2
+  image: python:3.12-slim
   before_script:
     - apt-get update && apt-get install make    
   script:
